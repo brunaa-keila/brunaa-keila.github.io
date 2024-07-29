@@ -8,37 +8,70 @@
 </head>
 <body>
     <header>
-        <h1>Meu Portfólio</h1>
-        <nav>
-            <ul>
-                <li><a href="#sobre">Sobre Mim</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>Meu Portfólio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="showSection('sobre')">Sobre Mim</a></li>
+                    <li><a href="#" onclick="showSection('projetos')">Projetos</a></li>
+                    <li><a href="#" onclick="showSection('habilidades')">Habilidades</a></li>
+                    <li><a href="#" onclick="showSection('contato')">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <section id="sobre">
+
+    <section id="sobre" class="container content-section">
         <h2>Sobre Mim</h2>
         <p>Olá! Eu sou [Seu Nome], um desenvolvedor apaixonado por tecnologia.</p>
     </section>
-    <section id="projetos">
+
+    <section id="projetos" class="container content-section">
         <h2>Projetos</h2>
+        <div class="projeto">
+            <h3>Projeto 1</h3>
+            <p>Descrição do Projeto 1. <a href="https://github.com/seu-usuario/projeto1">Ver no GitHub</a></p>
+        </div>
+        <div class="projeto">
+            <h3>Projeto 2</h3>
+            <p>Descrição do Projeto 2. <a href="https://github.com/seu-usuario/projeto2">Ver no GitHub</a></p>
+        </div>
+    </section>
+
+    <section id="habilidades" class="container content-section">
+        <h2>Habilidades</h2>
         <ul>
-            <li><a href="https://github.com/seu-usuario/projeto1">Projeto 1</a> - Descrição do projeto.</li>
-            <li><a href="https://github.com/seu-usuario/projeto2">Projeto 2</a> - Descrição do projeto.</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>Python</li>
         </ul>
     </section>
-    <section id="habilidades">
-        <h2>Habilidades</h2>
-        <p>HTML, CSS, JavaScript, React, etc.</p>
-    </section>
-    <section id="contato">
+
+    <section id="contato" class="container content-section">
         <h2>Contato</h2>
-        <p>Email: seuemail@exemplo.com</p>
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
     </section>
+
     <footer>
-        <p>&copy; 2024 [Seu Nome]. Todos os direitos reservados.</p>
+        <div class="container">
+            <p>&copy; 2024 [Seu Nome]. Todos os direitos reservados.</p>
+        </div>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
