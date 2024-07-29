@@ -2,9 +2,9 @@ function showSection(sectionId) {
     const sections = document.querySelectorAll('section');
     sections.forEach(section => {
         if (section.id === sectionId) {
-            section.style.display = 'block';
+            section.classList.add('show');
         } else {
-            section.style.display = 'none';
+            section.classList.remove('show');
         }
     });
 }
